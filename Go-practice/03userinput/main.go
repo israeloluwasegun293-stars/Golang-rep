@@ -7,13 +7,17 @@ import (
 )
 
 func main() {
-	welcome := "Welcome to Ijhayclassics Music Worldwide"
+	var welcome string = "welcome to our IJhayclassics music App"
 	fmt.Println(welcome)
 
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Enter your rating for our brand")
+	fmt.Println("Please rate our App")
 
-	input, _ := reader.ReadString('\n')
-	fmt.Println("Thanks for rating us ", input, "have a nice time")
-	fmt.Printf("rating is of: %T", input)
+	input, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("Error reading string", err)
+		return
+	}
+	fmt.Println("Thanks for rating our App:", input)
+	fmt.Printf("variable is of type %T", input)
 }

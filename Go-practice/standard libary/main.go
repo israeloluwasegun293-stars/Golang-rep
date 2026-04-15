@@ -4,9 +4,12 @@ import (
 	"fmt"
 	"sort"
 	"strings"
+	"time"
 )
 
 func main() {
+
+	
 	greetings := "Welcome to our Music app"
 	//this will check is  that word we input is actually in the string
 
@@ -44,4 +47,6 @@ func main() {
 
 	//to search strings this time
 	fmt.Println(sort.SearchStrings(names, "Zebra"))
+
+	fmt.Println(time.Now())
 }
