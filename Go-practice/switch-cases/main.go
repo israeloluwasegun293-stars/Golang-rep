@@ -1,21 +1,19 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
-
-	os := "Linux"
-
-	switch os{
-
-	case "Linux":
-		fmt.Println("operating system is Linux")
-
-	case "Windows":
-		fmt.Println("Operating system is Windows")
-
+	switch runtime.GOOS {
+	case "linux":
+		fmt.Println("Running on Linux")
+	case "windows":
+		fmt.Println("Running on Windows")
+	case "darwin":
+		fmt.Println("Running on macOS")
 	default:
-		fmt.Println("operating system not recognized")
+		fmt.Println("Unknown OS")
 	}
 }
