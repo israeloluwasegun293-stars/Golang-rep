@@ -31,7 +31,7 @@ func main() {
 		return
 	}
 
-	fmt.Println("Please provide a logic operator")
+	fmt.Println("Please provide a logic operator(+, -, /, *)")
 	input3, _ := reader.ReadString('\n')
 
 	operator := strings.TrimSpace(input3)
@@ -42,13 +42,14 @@ func main() {
 		fmt.Printf("Result: %.2f\n", num1+num2)
 
 	case "-":
-		fmt.Printf("Reuslt: %.2f\n", num1-num2)
+		fmt.Printf("Result: %.2f\n", num1-num2)
 
 	case "*":
 		fmt.Printf("Result: %.2f\n", num1*num2)
 	case "/":
 		if num2 == 0 {
 			fmt.Println("cannot divide number by 0")
+			return
 		}
 		fmt.Printf("Result: %.2f\n", num1/num2)
 	default:
