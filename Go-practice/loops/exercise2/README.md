@@ -1,0 +1,1 @@
+**Summation:** Write a loop that calculates the sum of all integers between 1 and 100, but use a break statement to stop the calculation if the sum exceeds 500. Print the final sum and the number where the loop stopped.
