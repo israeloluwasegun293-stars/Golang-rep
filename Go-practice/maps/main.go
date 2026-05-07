@@ -3,16 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	myNames := make(map[string]string)
+	inventory := make(map[string]int)
 
-	myNames["Israel"] = "Oluwasegun"
+	inventory["Laptop"] = 30
+	inventory["phones"] = 20
+	inventory["ipads"] = 12
+	inventory["samsung"] = 50
 
-	myNames["Okunade"] = "Joshua"
-
-	myNames["Oluwaseyi"] = "JesuTofunmi"
-
-	fmt.Println(myNames, len(myNames))
-	fmt.Println(myNames["Okunade"], len(myNames))
-	delete(myNames, "Oluwaseyi")
-	fmt.Println(myNames["Okunade"], len(myNames))
+	fmt.Printf("the number of laptops in the shop is %v\n", inventory["Laptop"])
 }
